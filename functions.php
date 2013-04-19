@@ -12,10 +12,7 @@ function remove_canvas_bloat() {
 
 	// Remove feedback JS
 	add_filter( 'woo_load_feedback_js', '__return_false' );
-	
-	// Remove site width
-	remove_action( 'wp_head', 'woo_load_site_width_css', 10 );
-	
+		
 	// Remove custom styles
 	remove_action( 'wp_head', 'woo_enqueue_custom_styling' );
 	
@@ -85,6 +82,9 @@ function add_fb_like() {
 		echo do_shortcode( '[fblike]' );
 	}
 }
+
+// Disable output of site width in HEAD
+function woo_load_site_width_css_nomedia() {}
 
 /*----------------------------------------------------------------*/
 /*
