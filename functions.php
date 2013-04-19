@@ -12,7 +12,10 @@ function remove_canvas_bloat() {
 
 	// Remove feedback JS
 	add_filter( 'woo_load_feedback_js', '__return_false' );
-		
+	
+	// Remove site width
+	remove_action( 'wp_head', 'woo_load_site_width_css', 10 );
+	
 	// Remove custom styles
 	remove_action( 'wp_head', 'woo_enqueue_custom_styling' );
 	
