@@ -41,13 +41,6 @@ function woo_custom_logo () {
 } 
 
 // Add google fonts
-/*
-add_action( 'wp_head', 'woo_custom_font' );
-function woo_custom_font () {
-	echo "<link href='http://fonts.googleapis.com/css?family=Coda|Arvo:400,700' rel='stylesheet' type='text/css'>" . "\n";
-} 
-*/
-
 function woo_custom_font()  {  
     wp_register_style( 'google-font', 'http://fonts.googleapis.com/css?family=Coda|Arvo:400,700' );  
     wp_enqueue_style( 'google-font' );  
